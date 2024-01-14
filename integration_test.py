@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 
-class TestTest1():
+class TestTest1(unittest.TestCase):
     def setup_method(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
@@ -31,3 +31,6 @@ class TestTest1():
   
     def teardown_method(self, method):
         self.driver.close()
+
+if __name__ == '__main__':
+    unittest.main()
