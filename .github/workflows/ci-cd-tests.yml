@@ -36,7 +36,7 @@ jobs:
 
     - name: Run unit tests
       run: |
-        docker exec test-container python -m unittest test-unit-app.py
+        docker exec test-container python -m unittest unit_test.py
         
     - name: Remove Docker container
       run: docker rm -f test-container
