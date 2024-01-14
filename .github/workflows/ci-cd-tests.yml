@@ -38,7 +38,7 @@ jobs:
       run: |
         docker exec test-container python -m unittest unit_test.py
 
-     - name: Run integration tests
+    - name: Run integration tests
       run: |
         docker exec testcontainer python tests/integration_test.py
         
