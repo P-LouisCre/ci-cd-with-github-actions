@@ -18,7 +18,6 @@ class TestTest1(unittest.TestCase):
         self.driver.get('http://localhost:5000')
   
     def test_test1(self):
-        self.driver.get("http://127.0.0.1:5000/")
         self.driver.find_element(By.NAME, "item").click()
         self.driver.find_element(By.NAME, "item").send_keys("Item 1")
         self.driver.find_element(By.NAME, "item").send_keys(Keys.ENTER)
