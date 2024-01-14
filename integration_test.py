@@ -18,7 +18,7 @@ class TestAppE2E(unittest.TestCase):
         self.driver.get('http://localhost:5000')
 
     def test_add_and_delete_item(self):
-        self.driver.get("http://127.0.0.1:5000/")
+        
         self.driver.find_element(By.NAME, "item").click()
         self.driver.find_element(By.NAME, "item").send_keys("AddItem")
         self.driver.find_element(By.NAME, "item").send_keys(Keys.ENTER)
