@@ -40,7 +40,7 @@ jobs:
 
     - name: Run integration tests
       run: |
-        docker exec testcontainer python tests/integration_test.py
+        docker exec test-container python integration_test.py
         
     - name: Remove Docker container
       run: docker rm -f test-container
