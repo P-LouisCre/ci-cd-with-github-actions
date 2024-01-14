@@ -1,10 +1,11 @@
 import unittest
-import chromedriver_autoinstaller_fix
-
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_autoinstaller_fix
 
 
 class TestTest1(unittest.TestCase):
@@ -17,7 +18,7 @@ class TestTest1(unittest.TestCase):
         self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get('http://localhost:5000')
   
-    def test_test1(self):
+    def test(self):
         self.driver.find_element(By.NAME, "item").click()
         self.driver.find_element(By.NAME, "item").send_keys("Item 1")
         self.driver.find_element(By.NAME, "item").send_keys(Keys.ENTER)
